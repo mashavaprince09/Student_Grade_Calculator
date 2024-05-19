@@ -7,19 +7,15 @@ public class StudentGradeCalculator {
       System.out.println("Welcome to the Student Grade Calculator.");      
       System.out.println("Please enter the subject name then enter the mark afterwards separated by a comma.");
       System.out.println("e.g. Life Orientation,70");
-      System.out.println("Enter 'done' when you're done");
+      System.out.println("Enter 'done' when you're done.");
       String input = "";
       String subject;
       double mark=0.0;
-      int numSubjects = 4;
-      results.put("Economic Management Sciences",50.0);
-      results.put("Physical Sciences",50.0);
-      results.put("Life Sciences",50.0);
-      results.put("Afr",50.0);
+      int numSubjects = 0;
       while (!input.equalsIgnoreCase("done")){
+         System.out.print("Enter subject and mark: ");
          input = sc.nextLine();
          if (!input.equalsIgnoreCase("done")){
-            boolean insert = false;
             try {
                subject = input.substring(0,input.indexOf(","));
                mark = Integer.parseInt(input.substring(input.indexOf(",")+1));  
@@ -30,7 +26,6 @@ public class StudentGradeCalculator {
                System.out.println("Error encountered!! Please try again and follow the specified format.");
             }
          }
-
       } 
       
       sc.close();
