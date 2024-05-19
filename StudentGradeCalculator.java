@@ -18,8 +18,12 @@ public class StudentGradeCalculator {
          mark = sc.nextDouble();  
          results.put(subject, mark);
       }
-
-      System.out.println(results);
-
+      double average = 0;
+      for (String key: results.keySet()){
+         average+= results.get(key);
+      }
+      average = Math.round(average/ numSubjects);
+      System.out.println("average:"+average);
+      
    }
 }
